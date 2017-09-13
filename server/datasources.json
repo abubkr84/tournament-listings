@@ -1,0 +1,14 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodb": {
+    "host": "ds155473.mlab.com",
+    "port": 43471,
+    "url": "mongodb://admin:admin@ds155473.mlab.com:55473/tournamentusa",
+    "database": "tournamentsusa",
+    "name": "mongodb",
+    "connector": "mongodb"
+  }
+}

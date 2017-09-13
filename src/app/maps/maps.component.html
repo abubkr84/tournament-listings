@@ -1,0 +1,26 @@
+<a routerLink="/" routerLinkActive="active">Back</a>
+<div>
+  <ngui-map zoom="5" center="Montreal, Canada">
+        <marker *ngFor="let post of positions[0]; let i = index" (mouseover)="clicked($event, i)"
+           [position]="post">
+          <info-window id="iw">
+            <div *ngIf="displayInfo">
+               <b><strong>Name: </strong>  {{listingsdata.name}}</b><br>
+               <b><strong>Starting Date: </strong> {{listingsdata.startdate}}</b><br>
+               <b><strong>Ending Date: </strong>  {{listingsdata.enddate}}</b><br>
+               <b><strong>Location: </strong> {{listingsdata.location.city}}, {{listingsdata.location.state}}</b><br>
+               <b><strong>Primary Complex: </strong> {{listingsdata.primary_complex}}</b><br>
+               <b><strong>Age Group: </strong> {{listingsdata.agegroup}}</b><br>
+               <b><strong>Age Cut-Off: </strong> {{listingsdata.age_cutoff}}</b><br>
+               <b><strong>Tournament Format :</strong> {{listingsdata.tournament_format}}</b><br>
+               <b><strong>Guranteed Games: </strong> {{listingsdata.guaranteedGames}}</b><br>
+               <b><strong>URL: </strong> <a href="{{listingsdata.url}}">Click here</a> </b><br>
+               <b><strong>Entry Fee: </strong> {{listingsdata.entry_fee}}</b><br>
+               <b><strong>Rules: </strong><a  href="{{listingsdata.rules}}">Click here</a></b><br>
+               <b><strong>Awards: </strong> {{listingsdata.awards}}</b><br>
+
+            </div>
+          </info-window>
+        </marker>
+  </ngui-map>
+</div>
